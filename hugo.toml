@@ -1,0 +1,45 @@
+baseURL = "https://KhoiNguyendes23.github.io/Kant_Nguyen_Networking_Blog/"
+languageCode = "vi-vn"
+title = "Lập Trình Cùng Kant"
+theme = "blowfish"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = "Ghi chép Java/JavaScript & Networking — ngắn gọn, có ví dụ chạy được."
+  colorScheme = "auto"
+  defaultAppearance = "auto"
+  autoSwitchAppearance = true
+  enableSearch = true
+  mainSections = ["posts"]
+  showAuthor = true
+  showReadingTime = true
+  showBreadCrumbs = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url  = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url  = "/about/"
+    weight = 3
+  [[menu.main]]
+    name = "Projects"
+    url  = "/projects/"
+    weight = 4
+
+[params.author]
+  name = "Kant Nguyen"
+  headline = "Trải nghiệm và cũng học lập trình với anh chàng sắp tham gia vào thị trường lao động nhé"
+  links = [{ github = "https://github.com/KhoiNguyendes23" }]
+
+[outputs]
+  home = ["HTML","RSS","JSON"]
