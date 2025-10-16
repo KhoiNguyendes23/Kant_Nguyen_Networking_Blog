@@ -1,0 +1,11 @@
+<div class="k-grid">
+  {{ range where .Site.RegularPages "Section" "posts" }}
+    <a class="k-card" href="{{ .RelPermalink }}">
+      <h3 style="margin:.2rem 0">{{ .Title }}</h3>
+      <p class="k-muted">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 130 }}{{ end }}</p>
+      <div class="k-tags">
+        {{ range first 3 .Params.tags }}<span class="k-tag">#{{ . }}</span>{{ end }}
+      </div>
+    </a>
+  {{ end }}
+</div>
