@@ -8,15 +8,23 @@ enableRobotsTXT = true
   pagerSize = 10
 
 [params]
-  description = "Ghi chép Java/JavaScript & Networking — ngắn gọn, có ví dụ chạy được."
-  colorScheme = "auto"
   defaultAppearance = "auto"
-  autoSwitchAppearance = true
+  colorScheme = "system"
+  dateFormat = "Jan 02, 2006"
+  description = "Blog lập trình mạng (Java/JS) — hiện đại, dễ đọc."
+  enableCodeCopy = true
   enableSearch = true
+  list.showCards = true
+  list.groupByYear = true
+  article.readingTime = true
+  article.license = ""
+  article.shareButtons = ["copy","linkedin","twitter"]
+  article.showDate = true
+  article.showAuthor = true
+  article.showBreadcrumbs = true
+  article.showDraftLabel = false
+  article.related = true
   mainSections = ["posts"]
-  showAuthor = true
-  showReadingTime = true
-  showBreadCrumbs = true
 
 [menu]
   [[menu.main]]
