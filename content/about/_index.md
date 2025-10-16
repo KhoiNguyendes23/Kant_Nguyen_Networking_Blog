@@ -1,22 +1,12 @@
 ---
 title: "About"
-summary: "Kant Nguyen — Java/JS & Networking."
 ---
-
-<div class="k-card" style="text-align:center">
-  <img src="/images/avatar.png" width="120" height="120" style="border-radius:999px;margin-bottom:8px" onerror="this.style.display='none'">
-  <h2>Kant Nguyen</h2>
-  <p style="opacity:.8">Sinh viên – yêu thích Networking, Java/JS, xây mini-apps thực dụng.</p>
-  <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
-    <span class="k-tag">Java</span><span class="k-tag">JavaScript</span><span class="k-tag">TCP/HTTP/WebSocket</span><span class="k-tag">Git/GitHub</span>
-  </div>
+<div class="k-card">
+  <h1 class="k-gradient" style="font-size:clamp(28px,4vw,44px)">Xin chào, mình là Kant Nguyen 👋</h1>
+  <p>SV năm 2, yêu thích lập trình mạng (Java/JavaScript). Blog này ghi lại quá trình học và làm dự án nhỏ.</p>
+  <ul>
+    <li><b>Kỹ năng:</b> Java (sockets, HTTP), JavaScript (Fetch/WebSocket), Git/GitHub.</li>
+    <li><b>Sở thích:</b> thể thao, đọc docs, tối ưu hiệu năng front-end.</li>
+    <li><b>Liên hệ:</b> <a href="mailto:example@email.com">example@email.com</a></li>
+  </ul>
 </div>
-
-## Mục tiêu
-
-- Viết bài súc tích, có ví dụ chạy được, ghi chú kinh nghiệm thực nghiệm.
-
-## Liên hệ
-
-- GitHub: https://github.com/KhoiNguyendes23
-- Email/LinkedIn: _bổ sung sau_
