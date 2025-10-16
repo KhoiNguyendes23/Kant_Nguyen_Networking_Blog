@@ -1,0 +1,25 @@
+<hr style="opacity:.15;margin:24px 0">
+<div class="k-card" style="display:flex;gap:14px;align-items:center">
+  <img src="/images/avatar.png" width="64" height="64" style="border-radius:999px" onerror="this.style.display='none'">
+  <div>
+    <strong>Kant Nguyen</strong>
+    <div class="k-muted">Sinh viên năm 2 – yêu thích Java/JS & Networking. Viết ngắn, có ví dụ thật.</div>
+    <div class="k-tags" style="margin-top:6px">
+      <a class="k-tag" href="https://github.com/KhoiNguyendes23">GitHub</a>
+      <a class="k-tag" href="/index.xml">RSS</a>
+    </div>
+  </div>
+</div>
+
+{{ $rels := where .Site.RegularPages "Section" "posts" | intersect (.Site.RegularPages.Related .) | first 3 }}
+{{ if gt (len $rels) 0 }}
+  <h3 style="margin-top:18px">Related</h3>
+  <div class="k-grid">
+    {{ range $rels }}
+      <a class="k-card" href="{{ .RelPermalink }}">
+        <h4 style="margin:.2rem 0">{{ .Title }}</h4>
+        <p class="k-muted">{{ .Summary | plainify | truncate 120 }}</p>
+      </a>
+    {{ end }}
+  </div>
+{{ end }}
