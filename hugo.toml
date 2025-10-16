@@ -25,7 +25,7 @@ enableRobotsTXT = true
 
 [params.author]
   name = "Kant Nguyen"
-  image = "/images/avatar.png"
+  headline = "Trải nghiệm và cũng học lập trình với anh chàng sắp tham gia vào thị trường lao động nhé"
   links = [
     { github = "https://github.com/KhoiNguyendes23" }
   ]
@@ -34,9 +34,15 @@ enableRobotsTXT = true
   threshold = 80
   includeNewer = true
   toLower = true
-  [[related.indices]] name = "tags"       weight = 100
-  [[related.indices]] name = "categories" weight = 80
-  [[related.indices]] name = "keywords"   weight = 50
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "categories"
+    weight = 80
+  [[related.indices]]
+    name = "keywords"
+    weight = 50
 
 [markup.highlight]
   style = "github"
@@ -58,11 +64,6 @@ enableRobotsTXT = true
     name = "Projects"
     url  = "/projects/"
     weight = 4
-
-[params.author]
-  name = "Kant Nguyen"
-  headline = "Trải nghiệm và cũng học lập trình với anh chàng sắp tham gia vào thị trường lao động nhé"
-  links = [{ github = "https://github.com/KhoiNguyendes23" }]
 
 [outputs]
   home = ["HTML","RSS","JSON"]
