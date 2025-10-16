@@ -1,0 +1,1 @@
+(()=>{const blocks=document.querySelectorAll('pre code');blocks.forEach(b=>{const btn=document.createElement('button');btn.className='k-copy';btn.textContent='Copy';btn.addEventListener('click',async()=>{await navigator.clipboard.writeText(b.innerText);btn.textContent='Copied!';setTimeout(()=>btn.textContent='Copy',1200)});b.parentElement.appendChild(btn);});})();
