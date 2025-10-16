@@ -1,0 +1,17 @@
+{{ $featured := first 3 ( where .Site.RegularPages "Params.featured" true ) }}
+{{ if gt (len $featured) 0 }}
+<section class="k-section">
+  <h2>Featured</h2>
+  <div class="k-grid">
+    {{ range $featured }}
+      <a class="k-card" href="{{ .RelPermalink }}">
+        <h3 style="margin:.2rem 0">{{ .Title }}</h3>
+        <p class="k-muted">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}</p>
+        <div class="k-tags">
+          {{ range first 3 .Params.tags }}<span class="k-tag">#{{ . }}</span>{{ end }}
+        </div>
+      </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
