@@ -2,6 +2,7 @@
 title: "About"
 summary: "Kant Nguyen — Java/JS & Networking."
 ---
+
 <div class="k-card" style="text-align:center">
   <img src="/images/avatar.png" width="120" height="120" style="border-radius:999px;margin-bottom:8px" onerror="this.style.display='none'">
   <h2>Kant Nguyen</h2>
@@ -12,8 +13,10 @@ summary: "Kant Nguyen — Java/JS & Networking."
 </div>
 
 ## Mục tiêu
+
 - Viết bài súc tích, có ví dụ chạy được, ghi chú kinh nghiệm thực nghiệm.
 
 ## Liên hệ
+
 - GitHub: https://github.com/KhoiNguyendes23
-- Email/LinkedIn: *bổ sung sau*
+- Email/LinkedIn: _bổ sung sau_

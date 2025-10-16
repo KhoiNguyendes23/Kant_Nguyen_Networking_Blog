@@ -1,5 +1,4 @@
-<script>
-(()=> { 
+(()=> {
   const root=document.querySelector('.k-hero-bg'); if(!root) return;
   const prefersReduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const speed={{ with .Site.Params.kant.backgroundSpeed }}{{ . }}{{ else }}0.15{{ end }};
@@ -24,4 +23,3 @@
     raf=requestAnimationFrame(tick); addEventListener('beforeunload', ()=>cancelAnimationFrame(raf));
   }
 })();
-</script>

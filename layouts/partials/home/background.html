@@ -27,33 +27,24 @@
       repeating-linear-gradient(-120deg, rgba(0,0,0,.035) 0 20px, transparent 20px 44px);
     mix-blend-mode:overlay
   }
-  @media (prefers-color-scheme:dark){.k-bg-pattern{opacity:.55}}
+  @media (max-width:900px),(prefers-reduced-motion:reduce){
+    .k-bg-pattern{display:none}
+  }
   .k-bg-blobs{overflow:hidden}
   .k-bg-blobs svg{
     width:160vmax;height:160vmax;position:absolute;left:50%;top:50%;
     transform:translate(-50%,-50%);filter:blur(26px) saturate(120%);opacity:.45
   }
   .k-bg-blobs .b1{fill:#60a5fa}.k-bg-blobs .b2{fill:#34d399}.k-bg-blobs .b3{fill:#38bdf8}
-  .k-parallax{will-change:transform;transform:translate3d(0,0,0)}
-  @media (max-width:900px),(prefers-reduced-motion:reduce){
-    .k-bg-blobs,.k-bg-pattern{display:none}
-  }
+  .k-parallax{will-change:transform}
 </style>
 <div class="k-layer k-bg-gradient k-parallax" data-depth="0.06"></div>
 <div class="k-layer k-bg-pattern  k-parallax" data-depth="0.10"></div>
 <div class="k-layer k-bg-blobs     k-parallax" data-depth="0.14" aria-hidden="true">
   <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-    <defs>
-      <filter id="n" x="-50%" y="-50%" width="200%" height="200%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="3"/>
-        <feColorMatrix type="saturate" values="1.1"/>
-      </filter>
-    </defs>
-    <g filter="url(#n)">
-      <circle class="b1" cx="20" cy="60" r="18"></circle>
-      <circle class="b2" cx="55" cy="35" r="16"></circle>
-      <circle class="b3" cx="85" cy="70" r="14"></circle>
-    </g>
+    <circle class="b1" cx="20" cy="60" r="18"></circle>
+    <circle class="b2" cx="55" cy="35" r="16"></circle>
+    <circle class="b3" cx="85" cy="70" r="14"></circle>
   </svg>
 </div>
 {{ end }}

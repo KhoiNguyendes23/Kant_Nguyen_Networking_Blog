@@ -4,14 +4,22 @@
   <h2>Featured</h2>
   <div class="k-grid">
     {{ range $featured }}
-      <a class="k-card" href="{{ .RelPermalink }}" style="position:relative;text-decoration:none;color:inherit">
-        <span class="k-featured">Featured</span>
-        <h3 style="margin:.2rem 0">{{ .Title }}</h3>
-        <p style="opacity:.8">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          {{ range first 3 .Params.tags }}<span class="k-tag">#{{ . }}</span>{{ end }}
-        </div>
-      </a>
+    <a
+      class="k-card"
+      href="{{ .RelPermalink }}"
+      style="position: relative; text-decoration: none; color: inherit"
+    >
+      <span class="k-featured">Featured</span>
+      <h3 style="margin: 0.2rem 0">{{ .Title }}</h3>
+      <p style="opacity: 0.8">
+        {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify |
+        truncate 140 }}{{ end }}
+      </p>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        {{ range first 3 .Params.tags }}<span class="k-tag">#{{ . }}</span>{{
+        end }}
+      </div>
+    </a>
     {{ end }}
   </div>
 </section>

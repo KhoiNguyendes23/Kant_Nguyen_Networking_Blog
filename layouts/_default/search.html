@@ -1,23 +1,52 @@
 {{ define "main" }}
 <div class="k-section">
   <h1>Search</h1>
-  <input id="q" placeholder="Search posts..." style="width:100%;padding:12px;border-radius:12px;border:1px solid #ddd;margin:8px 0 16px">
+  <input
+    id="q"
+    placeholder="Search posts..."
+    style="
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      margin: 8px 0 16px;
+    "
+  />
   <div id="results" class="k-grid"></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script>
-(async()=>{
-  const res=await fetch("/index.json"); const data=await res.json();
-  const docs=data.filter(d=>d.section==="posts");
-  const fuse=new Fuse(docs,{keys:["title","summary","content","tags"],threshold:0.35,ignoreLocation:true,minMatchCharLength:2});
-  const q=document.getElementById('q'); const box=document.getElementById('results');
-  const render=(items)=>{box.innerHTML=items.slice(0,24).map(x=>`
-    <a class="k-card" href="${x.permalink}" style="text-decoration:none;color:inherit">
+  (async () => {
+    const res = await fetch("/index.json");
+    const data = await res.json();
+    const docs = data.filter((d) => d.section === "posts");
+    const fuse = new Fuse(docs, {
+      keys: ["title", "summary", "content", "tags"],
+      threshold: 0.35,
+      ignoreLocation: true,
+      minMatchCharLength: 2,
+    });
+    const q = document.getElementById("q");
+    const box = document.getElementById("results");
+    const render = (items) => {
+      box.innerHTML = items
+        .slice(0, 24)
+        .map(
+          (x) => `
+    <a class="k-card" href="${
+      x.permalink
+    }" style="text-decoration:none;color:inherit">
       <h3>${x.title}</h3>
-      <p style="opacity:.8">${(x.summary||"").substring(0,140)}</p>
-    </a>`).join('');};
-  q.addEventListener('input',()=>{const t=q.value.trim(); render(t? fuse.search(t).map(r=>r.item): docs);});
-  render(docs);
-})();
+      <p style="opacity:.8">${(x.summary || "").substring(0, 140)}</p>
+    </a>`
+        )
+        .join("");
+    };
+    q.addEventListener("input", () => {
+      const t = q.value.trim();
+      render(t ? fuse.search(t).map((r) => r.item) : docs);
+    });
+    render(docs);
+  })();
 </script>
 {{ end }}
