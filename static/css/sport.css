@@ -54,3 +54,20 @@ h2,
 .container {
   max-width: 88ch;
 }
+
+/* ===== Neutral polish for Blowfish ===== */
+.container{max-width: 92ch;}
+.k-card{border-radius:16px;background:var(--card-bg,rgba(255,255,255,.85));padding:18px;border:1px solid rgba(0,0,0,.06);box-shadow:0 10px 24px rgba(0,0,0,.04);transition:transform .2s ease, box-shadow .2s ease;}
+.k-card:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(0,0,0,.06);}
+.k-btn{display:inline-flex;gap:8px;align-items:center;padding:10px 16px;border-radius:999px;background:#111; color:#fff; text-decoration:none; font-weight:700}
+.k-muted{opacity:.8}
+.k-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.k-hero{padding:9vh 0 6vh;text-align:center}
+.k-hero h1{font-weight:800;letter-spacing:.3px;margin:0}
+.k-tags{display:flex;gap:8px;flex-wrap:wrap}
+.k-tag{padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.06);font-size:.85rem}
+@media (prefers-color-scheme:dark){
+  .k-card{background:rgba(255,255,255,.08); border-color: rgba(255,255,255,.12)}
+  .k-btn{background:#fff;color:#111}
+  .k-tag{background:rgba(255,255,255,.1)}
+}
