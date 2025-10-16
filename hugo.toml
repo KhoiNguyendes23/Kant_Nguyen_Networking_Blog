@@ -5,26 +5,41 @@ theme = "blowfish"
 enableRobotsTXT = true
 
 [pagination]
-  pagerSize = 10
+  pagerSize = 12
 
 [params]
+  description = "Blog lập trình mạng (Java/JS) — ngắn gọn, có ví dụ chạy được."
   defaultAppearance = "auto"
-  colorScheme = "system"
-  dateFormat = "Jan 02, 2006"
-  description = "Blog lập trình mạng (Java/JS) — hiện đại, dễ đọc."
   enableCodeCopy = true
   enableSearch = true
   list.showCards = true
   list.groupByYear = true
-  article.readingTime = true
-  article.license = ""
-  article.shareButtons = ["copy","linkedin","twitter"]
-  article.showDate = true
-  article.showAuthor = true
-  article.showBreadcrumbs = true
-  article.showDraftLabel = false
-  article.related = true
-  mainSections = ["posts"]
+
+[params.article]
+  toc = true
+  readingTime = true
+  showDate = true
+  showAuthor = true
+  related = true
+  shareButtons = ["copy","twitter","linkedin"]
+
+[params.author]
+  name = "Kant Nguyen"
+  image = "/images/avatar.png"
+  links = [
+    { github = "https://github.com/KhoiNguyendes23" }
+  ]
+
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = true
+  [[related.indices]] name = "tags"       weight = 100
+  [[related.indices]] name = "categories" weight = 80
+  [[related.indices]] name = "keywords"   weight = 50
+
+[markup.highlight]
+  style = "github"
 
 [menu]
   [[menu.main]]
