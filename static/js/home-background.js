@@ -1,8 +1,8 @@
 (()=> {
   const root=document.querySelector('.k-hero-bg'); if(!root) return;
   const prefersReduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const speed={{ with .Site.Params.kant.backgroundSpeed }}{{ . }}{{ else }}0.15{{ end }};
-  const parallaxOn={{ if .Site.Params.kant.homeParallax }}true{{ else }}false{{ end }};
+  const speed=0.16;
+  const parallaxOn=true;
   const layers=[...root.querySelectorAll('.k-parallax')];
   let t=0, raf;
   const tick=()=>{ t+=0.016;

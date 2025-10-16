@@ -1,42 +1,32 @@
 {{ $cfg := .Site.Params.kant }}
 {{ if and $cfg.homeBackground .IsHome }}
 <style>
-  .k-hero-bg{position:relative;isolation:isolate}
-  .k-hero-bg .k-layer{position:absolute;inset:0;z-index:-1}
-  .k-bg-gradient{
-    background:
-      radial-gradient(40rem 26rem at 10% 20%, rgba(99,102,241,.18), transparent 60%),
-      radial-gradient(36rem 22rem at 85% 15%, rgba(16,185,129,.16), transparent 60%),
-      radial-gradient(32rem 24rem at 50% 85%, rgba(14,165,233,.16), transparent 60%),
-      linear-gradient(180deg, rgba(2,6,23,.02), transparent);
-    filter:saturate(110%)
-  }
-  @media (prefers-color-scheme:dark){
-    .k-bg-gradient{
-      background:
-        radial-gradient(40rem 26rem at 10% 20%, rgba(99,102,241,.22), transparent 60%),
-        radial-gradient(36rem 22rem at 85% 15%, rgba(16,185,129,.20), transparent 60%),
-        radial-gradient(32rem 24rem at 50% 85%, rgba(14,165,233,.20), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.02), transparent)
-    }
-  }
-  .k-bg-pattern{
-    opacity:.75;
-    background:
-      repeating-linear-gradient(120deg, rgba(0,0,0,.04) 0 14px, transparent 14px 36px),
-      repeating-linear-gradient(-120deg, rgba(0,0,0,.035) 0 20px, transparent 20px 44px);
-    mix-blend-mode:overlay
-  }
-  @media (max-width:900px),(prefers-reduced-motion:reduce){
-    .k-bg-pattern{display:none}
-  }
-  .k-bg-blobs{overflow:hidden}
-  .k-bg-blobs svg{
-    width:160vmax;height:160vmax;position:absolute;left:50%;top:50%;
-    transform:translate(-50%,-50%);filter:blur(26px) saturate(120%);opacity:.45
-  }
-  .k-bg-blobs .b1{fill:#60a5fa}.k-bg-blobs .b2{fill:#34d399}.k-bg-blobs .b3{fill:#38bdf8}
-  .k-parallax{will-change:transform}
+.k-hero-bg{position:relative;isolation:isolate}
+.k-hero-bg .k-layer{position:absolute;inset:0;z-index:-1}
+.k-bg-gradient{
+  background:
+   radial-gradient(40rem 26rem at 10% 20%, rgba(99,102,241,.18), transparent 60%),
+   radial-gradient(36rem 22rem at 85% 15%, rgba(16,185,129,.16), transparent 60%),
+   radial-gradient(32rem 24rem at 50% 85%, rgba(14,165,233,.16), transparent 60%),
+   linear-gradient(180deg, rgba(2,6,23,.02), transparent);
+}
+@media (prefers-color-scheme:dark){
+ .k-bg-gradient{
+  background:
+   radial-gradient(40rem 26rem at 10% 20%, rgba(99,102,241,.22), transparent 60%),
+   radial-gradient(36rem 22rem at 85% 15%, rgba(16,185,129,.20), transparent 60%),
+   radial-gradient(32rem 24rem at 50% 85%, rgba(14,165,233,.20), transparent 60%),
+   linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+}}
+.k-bg-pattern{opacity:.75;mix-blend-mode:overlay;
+  background:repeating-linear-gradient(120deg, rgba(0,0,0,.04) 0 14px, transparent 14px 36px),
+             repeating-linear-gradient(-120deg, rgba(0,0,0,.035) 0 20px, transparent 20px 44px);}
+.k-bg-blobs{overflow:hidden}
+.k-bg-blobs svg{width:160vmax;height:160vmax;position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-50%);filter:blur(26px) saturate(120%);opacity:.45}
+.k-bg-blobs .b1{fill:#60a5fa}.k-bg-blobs .b2{fill:#34d399}.k-bg-blobs .b3{fill:#38bdf8}
+.k-parallax{will-change:transform}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.k-bg-pattern,.k-bg-blobs{display:none}}
 </style>
 <div class="k-layer k-bg-gradient k-parallax" data-depth="0.06"></div>
 <div class="k-layer k-bg-pattern  k-parallax" data-depth="0.10"></div>
