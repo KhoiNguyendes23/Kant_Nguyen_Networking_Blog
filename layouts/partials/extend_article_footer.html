@@ -2,9 +2,9 @@
 <div class="k-card" style="display:flex;gap:14px;align-items:center">
   <img src="/images/avatar.png" width="64" height="64" style="border-radius:999px" onerror="this.style.display='none'">
   <div>
-    <strong>Kant Nguyen</strong>
-    <div class="k-muted">Sinh viên năm 2 – yêu thích Java/JS & Networking. Viết ngắn, có ví dụ thật.</div>
-    <div class="k-tags" style="margin-top:6px">
+    <strong>{{ site.Params.author.name }}</strong>
+    <div style="opacity:.8">Sinh viên – Java/JS & Networking. Viết ngắn, có ví dụ thật.</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
       <a class="k-tag" href="https://github.com/KhoiNguyendes23">GitHub</a>
       <a class="k-tag" href="/index.xml">RSS</a>
     </div>
@@ -16,10 +16,25 @@
   <h3 style="margin-top:18px">Related</h3>
   <div class="k-grid">
     {{ range $rels }}
-      <a class="k-card" href="{{ .RelPermalink }}">
+      <a class="k-card" href="{{ .RelPermalink }}" style="text-decoration:none;color:inherit">
         <h4 style="margin:.2rem 0">{{ .Title }}</h4>
-        <p class="k-muted">{{ .Summary | plainify | truncate 120 }}</p>
+        <p style="opacity:.8">{{ .Summary | plainify | truncate 120 }}</p>
       </a>
     {{ end }}
   </div>
 {{ end }}
+
+<div id="giscus" style="margin-top:24px"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="KhoiNguyendes23/Kant_Nguyen_Networking_Blog"
+        data-repo-id=""
+        data-category="General"
+        data-category-id=""
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        crossorigin="anonymous"
+        async>
+</script>
