@@ -1,11 +1,12 @@
-<div class="k-grid">
+<div id="k-filter" style="margin:12px 0 18px;display:flex;gap:10px;flex-wrap:wrap"></div>
+<div class="k-grid" id="k-grid">
   {{ range where .Site.RegularPages "Section" "posts" }}
-    <a class="k-card" href="{{ .RelPermalink }}">
-      <h3 style="margin:.2rem 0">{{ .Title }}</h3>
-      <p class="k-muted">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 130 }}{{ end }}</p>
-      <div class="k-tags">
-        {{ range first 3 .Params.tags }}<span class="k-tag">#{{ . }}</span>{{ end }}
-      </div>
-    </a>
+  <a class="k-card k-item" data-tags="{{ delimit .Params.tags "," }}" href="{{ .RelPermalink }}" style="text-decoration:none;color:inherit">
+    <h3 style="margin:.2rem 0">{{ .Title }}</h3>
+    <p style="opacity:.85">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 130 }}{{ end }}</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      {{ range first 3 .Params.tags }}<span class="k-tag">#{{ . }}</span>{{ end }}
+    </div>
+  </a>
   {{ end }}
 </div>
