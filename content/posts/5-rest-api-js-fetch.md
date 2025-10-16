@@ -2,6 +2,7 @@
 title: "Fetch API (JS) gọi REST"
 date: 2025-01-15
 draft: false
+featured: true
 summary: "Fetch với async/await, JSON, lỗi mạng."
 tags: ["http", "javascript"]
 categories: ["networking"]
