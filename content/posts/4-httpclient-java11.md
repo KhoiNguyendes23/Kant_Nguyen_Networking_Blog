@@ -2,6 +2,7 @@
 title: "HTTPClient Java 11"
 date: 2025-01-15
 draft: false
+featured: true
 summary: "GET/POST JSON, timeout, redirect, async."
 tags: ["http", "java"]
 categories: ["networking"]

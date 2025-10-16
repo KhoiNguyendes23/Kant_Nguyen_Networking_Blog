@@ -2,6 +2,7 @@
 title: "WebSocket Chat mini"
 date: 2025-01-15
 draft: false
+featured: true
 summary: "Chat realtime; kiến trúc publish/broadcast."
 tags: ["websocket", "java", "javascript"]
 categories: ["networking"]

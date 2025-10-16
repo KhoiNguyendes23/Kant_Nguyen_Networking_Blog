@@ -2,6 +2,7 @@
 title: "TCP Socket trong Java"
 date: 2025-01-15
 draft: false
+featured: true
 summary: "Viết Echo Server/Client bằng java.net.Socket/ServerSocket."
 tags: ["tcp", "java"]
 categories: ["networking"]
