@@ -1,0 +1,32 @@
+:root{
+  /* Sporty palette: electric blue + lime */
+  --sport-primary: #2563eb; /* blue-600 */
+  --sport-accent:  #22c55e; /* green-500 */
+  --sport-ink:     #0f172a; /* slate-900 */
+  --sport-muted:   #94a3b8; /* slate-400 */
+}
+h1,h2,.hero-title{
+  font-weight:800; letter-spacing:.2px;
+  background: linear-gradient(90deg,var(--sport-primary),var(--sport-accent));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.k-card{
+  background: rgba(255,255,255,.86);
+  border-radius: 18px; padding: 16px;
+  box-shadow: 0 10px 24px rgba(2,6,23,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.k-card:hover{ transform: translateY(-3px); box-shadow: 0 16px 36px rgba(2,6,23,.12); }
+.k-btn{ display:inline-flex; gap:8px; align-items:center; padding:10px 16px;
+  border-radius: 999px; color:#fff; font-weight:700; text-decoration:none;
+  background: linear-gradient(90deg,var(--sport-primary),var(--sport-accent));
+}
+.k-chip{ display:inline-block; padding:6px 10px; border-radius:999px;
+  background: color-mix(in srgb, var(--sport-accent) 18%, #fff);
+  border:1px solid color-mix(in srgb, var(--sport-accent) 45%, #fff);
+  font-size:.85rem; margin:4px 6px;
+}
+@media (prefers-color-scheme: dark){
+  .k-card{ background: rgba(15,23,42,.55); }
+}
+.container{ max-width: 88ch; }
