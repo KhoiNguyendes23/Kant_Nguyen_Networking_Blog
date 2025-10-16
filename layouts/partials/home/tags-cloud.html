@@ -1,0 +1,11 @@
+{{ $tags := .Site.Taxonomies.tags }}
+{{ if $tags }}
+<section class="k-section">
+  <h2>Explore by tags</h2>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    {{ range $name, $pages := $tags }}
+      <a class="k-tag" href="/tags/{{ $name | urlize }}/">#{{ $name }} ({{ len $pages }})</a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

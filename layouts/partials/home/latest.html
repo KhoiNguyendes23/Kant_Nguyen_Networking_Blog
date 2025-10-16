@@ -2,9 +2,9 @@
   <h2>Latest posts</h2>
   <div class="k-grid">
     {{ range first 6 ( where .Site.RegularPages "Section" "posts" ) }}
-      <a class="k-card" href="{{ .RelPermalink }}">
+      <a class="k-card" href="{{ .RelPermalink }}" style="text-decoration:none;color:inherit">
         <h3 style="margin:.2rem 0">{{ .Title }}</h3>
-        <p class="k-muted">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 130 }}{{ end }}</p>
+        <p style="opacity:.8">{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 130 }}{{ end }}</p>
         <div style="display:flex;gap:10px;align-items:center">
           <span class="k-tag">{{ .Date | time.Format "Jan 02, 2006" }}</span>
           {{ with .ReadingTime }}<span class="k-tag">{{ . }} min</span>{{ end }}
