@@ -1,4 +1,7 @@
-## title: "Projects"
-
-{{< project-card title="WebSocket Chat Mini" url="/posts/6-websocket-chat-mini/" desc="Chat realtime cơ bản bằng Java + JS." tags="🔌 WebSocket • Java" >}}
-{{< project-card title="HTTPClient Java 11" url="/posts/4-httpclient-java11/" desc="Gọi REST, timeout, retry." tags="🌐 HTTP • Java" >}}
+---
+title: "Projects"
+---
+<div class="k-grid">
+  <a class="k-card" href="/posts/6-websocket-chat-mini/"><h3>WebSocket Chat Mini</h3><p style="opacity:.8">Java + JS, broadcast & reconnect.</p></a>
+  <a class="k-card" href="/posts/4-httpclient-java11/"><h3>HTTPClient Java 11</h3><p style="opacity:.8">REST/timeout/retry, sample code.</p></a>
+</div>
