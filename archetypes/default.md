@@ -5,15 +5,21 @@ categories: []
 draft: false
 summary: ""
 cover:
-  image: ""
-  alt: ""
+image: ""
+alt: ""
+
 ---
+
 ## Mục tiêu
+
 - …
 
 ## Dàn ý
+
 - …
 
 ## Ví dụ ≤15 dòng
+
 ```java
 // …
+```

@@ -3,11 +3,12 @@ title: "WebSocket Chat mini"
 date: 2025-01-15
 draft: false
 summary: "Chat realtime; kiến trúc publish/broadcast."
-tags: ["websocket","java","javascript"]
+tags: ["websocket", "java", "javascript"]
 categories: ["networking"]
 ---
 
 ## Mục tiêu
+
 - Handshake WS
 - Broadcast to clients
 - Heartbeat/ping
@@ -15,6 +16,7 @@ categories: ["networking"]
 - Lưu ý reconnect
 
 ## Dàn ý
+
 - WebSocket server setup
 - Client connection management
 - Message broadcasting
@@ -22,6 +24,7 @@ categories: ["networking"]
 - Reconnection strategy
 
 ## Ví dụ ≤15 dòng
+
 ```java
 @ServerEndpoint("/chat")
 public class ChatEndpoint {

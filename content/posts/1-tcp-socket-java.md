@@ -3,11 +3,12 @@ title: "TCP Socket trong Java"
 date: 2025-01-15
 draft: false
 summary: "Viết Echo Server/Client bằng java.net.Socket/ServerSocket."
-tags: ["tcp","java"]
+tags: ["tcp", "java"]
 categories: ["networking"]
 ---
 
 ## Mục tiêu
+
 - Tạo ServerSocket accept loop
 - Client gửi/nhận chuỗi
 - Đóng tài nguyên try-with-resources
@@ -15,6 +16,7 @@ categories: ["networking"]
 - Demo ngắn
 
 ## Dàn ý
+
 - ServerSocket bind port
 - Accept connection loop
 - Client connect + send/receive
@@ -22,6 +24,7 @@ categories: ["networking"]
 - Error handling
 
 ## Ví dụ ≤15 dòng
+
 ```java
 // Server
 try (ServerSocket server = new ServerSocket(8080)) {
