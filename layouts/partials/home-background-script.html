@@ -1,0 +1,27 @@
+<script>
+(()=> { 
+  const root=document.querySelector('.k-hero-bg'); if(!root) return;
+  const prefersReduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const speed={{ with .Site.Params.kant.backgroundSpeed }}{{ . }}{{ else }}0.15{{ end }};
+  const parallaxOn={{ if .Site.Params.kant.homeParallax }}true{{ else }}false{{ end }};
+  const layers=[...root.querySelectorAll('.k-parallax')];
+  let t=0, raf;
+  const tick=()=>{ t+=0.016;
+    const s1=1+0.015*Math.sin(t*speed*2.1);
+    const s2=1+0.015*Math.cos(t*speed*1.7);
+    const s3=1+0.015*Math.sin(t*speed*2.6);
+    const blobs=root.querySelector('.k-bg-blobs svg');
+    if(blobs) blobs.style.transform=`translate(-50%,-50%) scale(${(s1+s2+s3)/3})`;
+    raf=requestAnimationFrame(tick);
+  };
+  const onScroll=()=>{ if(!parallaxOn) return;
+    const y=window.scrollY||0;
+    layers.forEach(el=>{ const d=parseFloat(el.dataset.depth||'0.08');
+      el.style.transform=`translate3d(0, ${y*d*-1}px, 0)`; });
+  };
+  if(!prefersReduced && matchMedia('(min-width:900px)').matches){
+    onScroll(); addEventListener('scroll', onScroll, {passive:true});
+    raf=requestAnimationFrame(tick); addEventListener('beforeunload', ()=>cancelAnimationFrame(raf));
+  }
+})();
+</script>

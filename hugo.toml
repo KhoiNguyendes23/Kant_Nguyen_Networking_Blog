@@ -30,6 +30,11 @@ enableRobotsTXT = true
     { github = "https://github.com/KhoiNguyendes23" }
   ]
 
+[params.kant]
+  homeBackground = true
+  homeParallax = true
+  backgroundSpeed = 0.15
+
 [related]
   threshold = 80
   includeNewer = true
